@@ -1,1 +1,73 @@
 /*Maak hier jouw CSS!*/
+
+
+/*dit is de mobiele versie*/
+.container {
+    background-color:hsl(59, 72%, 52%) ;
+    display: grid;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-columns: 1fr ;
+    grid-gap: 16px;
+    grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "."
+            "f";
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.item-a{
+    background-color: 	hsl(0, 100%, 50%);
+    grid-area: a;
+}
+
+.item-b{
+    background-color: hsl(181, 49%, 43%);
+    grid-area: b;
+}
+
+.item-c{
+    background-color: hsl(154, 53%, 57%);
+    grid-area: c;
+}
+
+.item-d{
+    background-color: hsl(134, 75%, 72%);
+    grid-area: d;
+}
+
+.item-e{
+    background-color: hsl(126, 81%, 88%) ;
+    grid-area: e;
+}
+
+.item-f{
+    background-color: hsl(191, 66%, 55%) ;
+    grid-area: f;
+}
+
+/*dit is voor desktops vanaf 576px en groter*/
+@media screen and (min-width: 576px) {
+    .container {
+        background-color: hsl(59, 72%, 52%);
+        display: grid;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 16px;
+        grid-template-areas:
+        " a c c"
+        " b c c"
+        " b e d"
+        " b e . "
+        " f f f";
+    }
+}
